@@ -1,26 +1,4 @@
 <?php
-
-echo "<h1>Task_1</h1> <br>";
-$arr = [];
-for ($i = 0; $i <= rand(1, 20); $i ++) {
-    array_push($arr, rand(1, 100));
-
-}
-echo "<pre>";
-print_r($arr);
-$arr = array_unique($arr);
-rsort($arr);
-$content = "<table border='1' style='width: 100px; height: auto; border-collapse: collapse;'>";
-foreach ($arr as $key => $value) {
-//    $content .= "<td>" . $key . "</td><td>" . $value . "</td>";
-    $content .= "<tr><td> $key </td><td>  $value</td></tr>";
-}
-$content .= "</table>";
-echo $content;
-
-
-
-
 echo "<h1>Task_2</h1> <br>" ;
 $array1 = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
     "q", "r", "s", "t", "u", "v", "w", "x", "u", "z", "A", "B", "C", "D", "E", "F", "G", "H",
@@ -61,55 +39,6 @@ createStr($length, $select, $array1, $array2, $array3);
         <button type="submit">Send</button>
     </form>
 </div>
-<?php
-
-echo "<h1>Task_3</h1> <br>" ;
-
-abstract class Car
-{
-    public $name;
-    public $year;
-    public $color;
-    public function __construct($name, $year, $color)
-    {
-        $this->name = $name;
-        $this->year = $year;
-        $this->color = $color;
-    }
-    abstract public function intro();
-}
-
-
-class Audi extends Car
-{
-    public function intro()
-    {
-        return "The care name is $this->name the year is $this->year the color is $this->color";
-    }
-}
-
-class Volvo extends Car
-{
-    public function intro()
-    {
-        return "The care name is $this->name the year is $this->year the color is $this->color";
-    }
-}
-
-$audi = new Audi("Audi", 2000, "red");
-echo $audi->intro();
-echo "<br>";
-
-$volvo = new Volvo("Volvo", 2004, "blue");
-echo $volvo->intro();
-echo "<br>";
-
-?>
-
-
-
-
-
 
 
 
